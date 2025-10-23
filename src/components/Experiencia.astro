@@ -1,0 +1,106 @@
+---
+const titulo = "Experiencia";
+
+// Edita tu historial aquí:
+const jobs = [
+  {
+    puesto: "Senior Full Stack Developer",
+    empresa: "Tech Solutions Inc.",
+    periodo: "2023 - Presente",
+    resumen:
+      "Liderando el desarrollo de aplicaciones web escalables con React y Node.js. Implementación de arquitecturas basadas en microservicios y mentoría de desarrolladores junior.",
+  },
+  {
+    puesto: "Full Stack Developer",
+    empresa: "Digital Innovations",
+    periodo: "2021 - 2023",
+    resumen:
+      "Desarrollo de aplicaciones SaaS para múltiples clientes. Trabajo en equipo ágil con enfoque en testing y calidad de código.",
+  },
+  {
+    puesto: "Frontend Developer",
+    empresa: "StartUp Hub",
+    periodo: "2019 - 2021",
+    resumen:
+      "Creación de interfaces de usuario responsivas y accesibles. Colaboración cercana con diseño para implementar diseños pixel-perfect.",
+  },
+];
+---
+
+<section id="experiencia" class="relative isolate">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+    <!-- Título -->
+    <h2
+      class="animate-fade-up opacity-0 [animation-delay:0.05s]
+             text-center text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-900"
+    >
+      {titulo}
+    </h2>
+
+    <!-- Timeline -->
+    <ol class="mt-12 space-y-12">
+      {jobs.map((job, i) => (
+        <li
+          class="relative grid grid-cols-1 lg:grid-cols-[24px_1fr_auto] gap-x-6 gap-y-2"
+        >
+          <!-- Columna: punto + línea -->
+          <div class="hidden lg:block relative">
+            <!-- Línea -->
+            <div class="absolute left-[11px] top-0 h-full w-px bg-neutral-300"></div>
+            <!-- Punto -->
+            <span
+              class="relative z-10 mt-1 block h-2.5 w-2.5 rounded-full bg-neutral-900"
+            ></span>
+          </div>
+
+          <!-- Para móviles: punto y línea al margen izquierdo -->
+          <div class="lg:hidden relative pl-6">
+            <div class="absolute left-2 top-2 h-[calc(100%-0.5rem)] w-px bg-neutral-300"></div>
+            <span class="absolute left-1.5 top-1.5 h-2.5 w-2.5 rounded-full bg-neutral-900"></span>
+          </div>
+
+          <!-- Contenido -->
+          <div
+            class="animate-fade-up opacity-0 [animation-delay:0.15s]
+                   -mt-1 lg:mt-0 lg:pl-0 pl-6"
+          >
+            <h3 class="text-lg sm:text-xl font-semibold text-neutral-900">
+              {job.puesto}
+            </h3>
+            <p class="mt-0.5 text-neutral-500">{job.empresa}</p>
+            <p class="mt-3 max-w-3xl text-[15px] leading-7 text-neutral-600">
+              {job.resumen}
+            </p>
+          </div>
+
+          <!-- Fecha (pill) -->
+          <div
+            class="animate-fade-up opacity-0 [animation-delay:0.25s]
+                   flex lg:justify-end items-start pl-6 lg:pl-0"
+          >
+            <span
+              class="inline-flex items-center rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600 ring-1 ring-neutral-200"
+            >
+              {job.periodo}
+            </span>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style is:global>
+  /* Reusa la misma animación del resto del sitio.
+     Si ya está declarada globalmente, puedes quitar este bloque. */
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 700ms cubic-bezier(.22,.61,.36,1) both;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up { animation-duration: 1ms; transform: none; }
+  }
+</style>

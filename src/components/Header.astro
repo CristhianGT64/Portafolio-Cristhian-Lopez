@@ -1,0 +1,103 @@
+<!-- Navbar -->
+<header id="site-header" class="fixed top-0 left-0 w-full z-50">
+  <!-- Tira superior oscura como en la captura -->
+  <div class="hidden md:block h-3 w-full bg-neutral-900"></div>
+
+  <!-- Barra principal -->
+  <div class="main-bar w-full border-b border-neutral-200 bg-white/95 backdrop-blur-0 supports-[backdrop-filter]:backdrop-blur-0 transition-[background-color,backdrop-filter,box-shadow,border-color] duration-300">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <!-- Layout en grid para centrar el menú -->
+      <div class="grid grid-cols-4 items-center h-16">
+        <!-- Izquierda: Logo -->
+        <div class="flex items-center gap-3 col-span-2">
+          <a href="/" class="inline-flex items-center font-semibold tracking-wide text-neutral-900 text-xl">
+            &lt;Inicio /&gt;
+          </a>
+        </div>
+
+        <!-- Centro: Links (desktop) -->
+        <div class="hidden md:flex items-center justify-center">
+          <ul class="flex gap-12">
+            <li><a href="#sobre-mi" class="text-neutral-500 whitespace-nowrap hover:text-neutral-900 transition-colors ">Sobre Mí</a></li>
+            <li><a href="#habilidades" class="text-neutral-500 hover:text-neutral-900 transition-colors">Habilidades</a></li>
+            <li><a href="#experiencia" class="text-neutral-500 hover:text-neutral-900 transition-colors">Experiencia</a></li>
+            <li><a href="#proyectos" class="text-neutral-500 hover:text-neutral-900 transition-colors">Proyectos</a></li>
+            <li><a href="#contacto" class="text-neutral-500 hover:text-neutral-900 transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Derecha: Acciones -->
+        <div class="flex items-center justify-end gap-3">
+
+            <span class="w-9">
+                <img src="/images/barra-vertical.png" alt="">
+            </span>
+
+          <!-- Botón Idioma -->
+          <button type="button" aria-label="Cambiar idioma"
+            class="rounded-xl border border-neutral-200 p-2 hover:bg-neutral-50 active:scale-[0.98] transition">
+            <!-- Globo (inline SVG) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 3c4.97 0 9 4.03 9 9s-4.03 9-9 9-9-4.03-9-9 4.03-9 9-9zm0 0c2.5 2.5 3.75 5.5 3.75 9S14.5 18.5 12 21m0-18C9.5 5.5 8.25 8.5 8.25 12S9.5 18.5 12 21M3 12h18" />
+            </svg>
+          </button>
+
+          <!-- Botón Tema -->
+          <button type="button" aria-label="Cambiar tema"
+            class="rounded-xl border border-neutral-200 p-2 hover:bg-neutral-50 active:scale-[0.98] transition">
+            <!-- Luna (inline SVG) -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M21.752 15.002a9.718 9.718 0 01-9.75-9.75 9.001 9.001 0 1011.7 11.7 9.78 9.78 0 01-1.95-1.95z" />
+            </svg>
+          </button>
+
+          <!-- Hamburguesa (mobile) -->
+          <label for="nav-toggle" class="md:hidden rounded-xl border border-neutral-200 p-2 hover:bg-neutral-50 cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </label>
+        </div>
+      </div>
+
+      <!-- Menú móvil (sin JS con checkbox) -->
+      <input id="nav-toggle" type="checkbox" class="peer hidden" />
+      <div
+        class="md:hidden peer-checked:max-h-96 max-h-0 overflow-hidden transition-[max-height] duration-300 ease-in-out">
+        <ul class="flex flex-col gap-2 pb-4 pt-2">
+          <li><a href="#sobre-mi" class="block rounded-lg px-3 py-2 text-neutral-700 hover:bg-neutral-100">Sobre Mí</a></li>
+          <li><a href="#habilidades" class="block rounded-lg px-3 py-2 text-neutral-700 hover:bg-neutral-100">Habilidades</a></li>
+          <li><a href="#experiencia" class="block rounded-lg px-3 py-2 text-neutral-700 hover:bg-neutral-100">Experiencia</a></li>
+          <li><a href="#proyectos" class="block rounded-lg px-3 py-2 text-neutral-700 hover:bg-neutral-100">Proyectos</a></li>
+          <li><a href="#contacto" class="block rounded-lg px-3 py-2 text-neutral-700 hover:bg-neutral-100">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- Spacer para que el contenido no quede bajo el header fixed -->
+<div class="h-16 md:h-16" aria-hidden="true"></div>
+
+<!-- Script: cambia estilo al hacer scroll -->
+<script>
+  (function () {
+    const header = document.getElementById('site-header');
+    if (!header) return;
+    const THRESHOLD = 12; // px para activar el efecto
+
+    function onScroll() {
+      if (window.scrollY > THRESHOLD) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    }
+
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+
+

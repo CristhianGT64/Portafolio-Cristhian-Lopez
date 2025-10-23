@@ -1,0 +1,100 @@
+---
+const nombre = "Cristhian Lopez";
+const rol = "Desarrollador Web";
+const linkContacto = "#contacto";
+const linkProyectos = "#proyectos";
+const linkGithub = "https://github.com/tu-usuario";
+const linkLinkedIn = "https://www.linkedin.com/in/tu-usuario/";
+const linkEmail = "mailto:alex@example.com";
+---
+<section id="inicio" class="relative isolate overflow-hidden">
+  <div class="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-16 md:pt-24 lg:pt-28">
+
+    <!-- Título -->
+    <h1 class="animate-fade-up opacity-0 [animation-delay:0.05s]
+               text-center font-semibold tracking-tight text-neutral-900
+               text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05]">
+      Hola, soy <br>
+       {nombre}
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="animate-fade-up opacity-0 [animation-delay:0.2s]
+              mt-6 text-center text-2xl sm:text-3xl font-medium text-slate-500">
+      {rol}
+    </p>
+
+    <!-- Descripción -->
+    <p class="animate-fade-up opacity-0 [animation-delay:0.35s]
+              mx-auto mt-8 max-w-3xl text-center text-lg sm:text-xl text-slate-500">
+      Transformo ideas en experiencias digitales excepcionales. Especializado en
+      crear aplicaciones web modernas, rápidas y escalables.
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="animate-fade-up opacity-0 [animation-delay:0.5s]
+                mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href={linkContacto}
+        class="inline-flex items-center gap-2 rounded-xl bg-neutral-900 px-5 py-3 text-base font-semibold text-white shadow-sm ring-1 ring-neutral-900/10 hover:bg-neutral-800 active:scale-[0.99] transition"
+        aria-label="Ir a contacto">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 7.5l8.57 5.43a2 2 0 0 0 2.16 0L22 7.5M4 18h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1z"/>
+        </svg>
+        Contáctame
+      </a>
+
+      <a
+        href={linkProyectos}
+        class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-base font-semibold text-neutral-800 ring-1 ring-neutral-200 hover:bg-neutral-50 active:scale-[0.99] transition"
+        aria-label="Ver proyectos">
+        Ver Proyectos
+      </a>
+    </div>
+
+    <!-- Redes -->
+    <div class="animate-fade-up opacity-0 [animation-delay:0.65s]
+                mt-14 flex items-center justify-center gap-8 text-neutral-400">
+      <a href={linkGithub} aria-label="GitHub" class="hover:text-neutral-600 transition" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             class="h-6 w-6" fill="currentColor">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.02c-3.22.7-3.9-1.4-3.9-1.4-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.74 1.27 3.41.97.11-.75.41-1.27.75-1.56-2.57-.29-5.28-1.29-5.28-5.75 0-1.27.46-2.31 1.2-3.12-.12-.29-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.19a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.19 3.2-1.19.63 1.59.23 2.77.11 3.06.75.81 1.2 1.85 1.2 3.12 0 4.47-2.72 5.46-5.31 5.74.42.36.8 1.07.8 2.16v3.2c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .5Z"/>
+        </svg>
+      </a>
+
+      <a href={linkLinkedIn} aria-label="LinkedIn" class="hover:text-neutral-600 transition" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             class="h-6 w-6" fill="currentColor">
+          <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zm7.5 0h3.84v1.97h.06c.53-1 1.83-2.06 3.77-2.06 4.04 0 4.79 2.66 4.79 6.11V23h-4v-6.51c0-1.55-.03-3.54-2.16-3.54-2.17 0-2.5 1.7-2.5 3.44V23h-4V8.5z"/>
+        </svg>
+      </a>
+
+      <a href={linkEmail} aria-label="Enviar correo" class="hover:text-neutral-600 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+             class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M3 7.5l8.57 5.43a2 2 0 0 0 2.16 0L22 7.5M4 18h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style is:global>
+  /* Keyframes y utilidades Tailwind-like sin tocar tailwind.config */
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fade-up 700ms cubic-bezier(.22,.61,.36,1) both;
+  }
+  /* Stagger con delays usando arbitrary properties: [animation-delay:...] ya está en las clases */
+  /* Respeta usuarios con reducción de movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-fade-up { animation-duration: 1ms; transform: none; }
+  }
+</style>
