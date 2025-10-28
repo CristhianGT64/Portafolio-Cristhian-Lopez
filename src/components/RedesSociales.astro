@@ -1,0 +1,16 @@
+---
+import type { RedesSociales } from "../interfaces/Interfaces";
+const {name, url, icon} = Astro.props as RedesSociales;
+---
+      
+      
+<div>
+  <a href={url}  class="hover:text-neutral-600 transition" target="_blank" rel="noopener noreferrer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+         class="h-8 w-8" fill="currentColor"> 
+      <path fill-rule="evenodd" clip-rule="evenodd"
+            d={icon}/>
+    </svg>
+  </a>
+
+</div>

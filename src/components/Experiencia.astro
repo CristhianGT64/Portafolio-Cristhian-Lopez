@@ -90,17 +90,3 @@ const jobs = [
   </div>
 </section>
 
-<style is:global>
-  /* Reusa la misma animación del resto del sitio.
-     Si ya está declarada globalmente, puedes quitar este bloque. */
-  @keyframes fade-up {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .animate-fade-up {
-    animation: fade-up 700ms cubic-bezier(.22,.61,.36,1) both;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .animate-fade-up { animation-duration: 1ms; transform: none; }
-  }
-</style>

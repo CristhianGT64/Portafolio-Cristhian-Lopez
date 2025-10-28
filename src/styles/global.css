@@ -34,3 +34,20 @@
   @media (prefers-reduced-motion: reduce) {
     .animate-fade-up { animation-duration: 1ms; transform: none; }
   }
+
+  @keyframes grow { from { width: 0; } to { width: var(--target, 100%); } }
+  .animate-grow { animation: grow 900ms cubic-bezier(.22,.61,.36,1); }
+
+    /* Mostrar el panel correspondiente usando el WRAPPER .projects-card */
+  #tab-dashboard:checked ~ .projects-card .tab-panel[data-tab="dashboard"] { display: block; }
+  #tab-app-tareas:checked ~ .projects-card .tab-panel[data-tab="app-tareas"] { display: block; }
+  #tab-ecommerce:checked ~ .projects-card .tab-panel[data-tab="ecommerce"] { display: block; }
+
+  /* Marcar label activo */
+  #tab-dashboard:checked ~ .projects-card label[for="tab-dashboard"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+  #tab-app-tareas:checked ~ .projects-card label[for="tab-app-tareas"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+  #tab-ecommerce:checked ~ .projects-card label[for="tab-ecommerce"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+
+  /* Fade del panel */
+  @keyframes panel-fade { from {opacity:0; transform:translateY(6px);} to {opacity:1; transform:translateY(0);} }
+  .tab-panel { animation: panel-fade .35s ease both; }
