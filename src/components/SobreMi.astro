@@ -1,7 +1,8 @@
 ---
 /* Props opcionales por si quieres reutilizar el componente */
-const titulo = "Sobre Mí";
 const imagen = "/images/Imagen_Propia.jpg"; // cambia a tu ruta real
+
+import { sobreMi } from "../content/data/db";
 ---
 
 <section id="sobre-mi" class="relative isolate">
@@ -9,7 +10,7 @@ const imagen = "/images/Imagen_Propia.jpg"; // cambia a tu ruta real
     <!-- Título -->
     <h2 class="animate-fade-up opacity-0 [animation-delay:0.05s]
                text-center text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-900">
-      {titulo}
+      Sobre Mí
     </h2>
 
     <!-- Grid contenido -->
@@ -17,22 +18,15 @@ const imagen = "/images/Imagen_Propia.jpg"; // cambia a tu ruta real
       <!-- Texto -->
       <div class="animate-fade-up opacity-0 [animation-delay:0.2s]">
         <div class="mx-auto max-w-2xl text-lg leading-8 text-slate-600 space-y-7">
-          <p>
-                Soy un joven hondureño apasionado de las tecnologías de la computación, orientadas al desarrollo web,
-                gestión de base de datos, redes, arquitectura computacional y soporte técnico. Disfruto el aprendizaje
-                constante de nuevas tecnologías para la solución de problemas y crecimiento profesional, lo que me permite
-                ser capaz de alinearme con los objetivos estratégicos de las organizaciones. Me caracterizo por cumplir
-                las metas que se me proponen, procurando utilizar eficazmente todas las herramientas y habilidades necesarias
-                para entregar resultados de calidad.
-          </p>
-          <p>
-                Soy un aficionado del fútbol y los videojuegos: dos pasatiempos que disfruto tanto por diversión como por
-                 la estrategia y atención al detalle que ameritan.
-          </p>
-          <p>
-            Profesional con experiencia en instalación de redes y soporte técnico especializado en diagnóstico, reparación y
-             atención al usuario. Enfocado en garantizar conectividad y soluciones rápidas en entornos empresariales.
-          </p>
+
+          {
+            sobreMi.map((descripcion) =>(
+              <h3 class="text-2xl font-medium text-neutral-900 mb-3"> {/* Cambiado de h2 a h3 y ajustadas las clases */}
+                {descripcion.title}
+              </h3>
+              <p>{descripcion.description}</p>
+            ))
+          }
         </div>
       </div>
 
@@ -43,7 +37,7 @@ const imagen = "/images/Imagen_Propia.jpg"; // cambia a tu ruta real
             src={imagen}
             alt="Foto de Cristhian Lopez"
             loading="lazy"
-            class="h-150 w-full object-cover"
+            class="h-180 w-full object-cover"
           />
         </figure>
       </div>

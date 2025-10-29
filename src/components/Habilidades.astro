@@ -1,60 +1,60 @@
 ---
-const titulo = "Habilidades";
 
-// Edita tus categorías y skills:
-const categorias = [
-  { nombre: "Frontend", skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Vue.js", "HTML5", "CSS3"] },
-  { nombre: "Backend", skills: ["Node.js", "Express", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL"] },
-  { nombre: "Herramientas", skills: ["Git", "Docker", "AWS", "Vercel", "Figma", "VS Code", "Postman"] },
-  { nombre: "Otros", skills: ["Responsive Design", "UI/UX", "Testing", "CI/CD", "Agile/Scrum"] },
-];
+import type { Skills } from '../interfaces/Interfaces'
 
-// % aleatorio 1–100
-const rand = () => Math.max(1, Math.floor(Math.random() * 100));
-const data = categorias.map(cat => ({
-  ...cat,
-  items: cat.skills.map(s => ({ nombre: s, pct: rand() }))
-}));
+interface Props {
+    skills: Skills
+}
+
+const { skills } = Astro.props;
 ---
 
-<section id="habilidades" class="relative isolate">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-    <h2 class="text-center text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-900">
-      {titulo}
-    </h2>
-
     <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-      {data.map((cat) => (
+    {Object.entries(skills).map(([c,s])=> (
+
         <div class="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-          <h3 class="text-lg font-medium text-neutral-900">{cat.nombre}</h3>
+          <h3 class="text-lg font-medium text-neutral-900">{c}</h3>
 
           <ul class="mt-5 space-y-4">
-            {cat.items.map((skill) => (
+            {
+              s
+              .slice() // Clonamos el array para no mutar el original
+              .sort((a, b) => b.level - a.level) // Ordenamos de mayor a menor
+              .map((skill, index) => (
+            
               <li class="group">
                 <!-- Etiqueta -->
                 <div class="mb-1.5 inline-flex items-center gap-2">
                   <span class="rounded-full bg-neutral-100 px-2.5 py-1 text-xs font-medium text-neutral-700 ring-1 ring-neutral-200">
-                    {skill.nombre}
+                    {skill.name}
                   </span>
-                  <span class="text-[12px] text-neutral-500 tabular-nums">{skill.pct}%</span>
+                  <span class="text-[12px] text-neutral-500 tabular-nums">{skill.level}%</span>
                 </div>
 
                 <!-- Barra de progreso -->
                 <div class="h-2.5 w-full rounded-full bg-neutral-100 ring-1 ring-neutral-200 overflow-hidden">
                   <div
                     class="h-full rounded-full bg-neutral-900 animate-grow"
-                    style={`width:${skill.pct}%;`}
-                    aria-label={`Nivel en ${skill.nombre}: ${skill.pct}%`}
+                    style={`width:${skill.level}%;`}
+                    aria-label={`Nivel en ${skill.name}: ${skill.level}%`}
                     role="progressbar"
-                    aria-valuemin="0" aria-valuemax="100" aria-valuenow={skill.pct}
+                    aria-valuemin="0" aria-valuemax="100" aria-valuenow={skill.level}
                   />
                 </div>
               </li>
-            ))}
+              ))
+            }
           </ul>
         </div>
       ))}
+
     </div>
-  </div>
-</section>
+
+
+
+
+
+
+
+    
 

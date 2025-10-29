@@ -1,4 +1,5 @@
-import type { RedesSociales } from "../../interfaces/Interfaces";
+import { string } from "astro:schema";
+import type { RedesSociales, InfoSobreMi, Skills, Experiencia } from "../../interfaces/Interfaces";
 
 export const redes : RedesSociales[] = [
     {
@@ -15,5 +16,100 @@ export const redes : RedesSociales[] = [
         name : 'Correo',
         url : 'mailto:crislopezgt84@gmail.com',
         icon : 'M3 7.5l8.57 5.43a2 2 0 0 0 2.16 0L22 7.5M4 18h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1z'
+    }
+]
+
+export const sobreMi : InfoSobreMi[] =[
+     {
+        title : '',
+        description : 'Soy un joven hondureño apasionado de las tecnologías de la computación, orientadas al desarrollo web, gestión de base de datos, redes, arquitectura computacional y soporte técnico. Disfruto el aprendizaje constante de nuevas tecnologías para la solución de problemas y crecimiento profesional, lo que me permite ser capaz de alinearme con los objetivos estratégicos de las organizaciones. Me caracterizo por cumplir las metas que se me proponen, procurando utilizar eficazmente todas las herramientas y habilidades necesarias para entregar resultados de calidad.',
+    },
+    {
+        title : 'Pasatiempo ⚽🎮',
+        description : 'Soy un aficionado del fútbol y los videojuegos: dos pasatiempos que disfruto tanto por diversión como por la estrategia y atención al detalle que ameritan.'
+    },
+    {
+        title : 'Trayectoria Profesional 🧑🏻‍💼💼',
+        description : 'Profesional con experiencia en instalación de redes, soporte técnico y desarrollo web, especializado en diagnóstico, reparación y atención al usuario. Enfocado en garantizar conectividad y soluciones rápidas en entornos empresariales.'
+    }
+]
+
+export const skills : Skills = {
+    FronEnd : [
+        { name: 'Tailwind' , level : 45},
+        {name : 'Boostrap', level : 30},
+        {name : 'Astro', level : 25},
+        {name : 'javaScript', level:30}
+    ],
+    BackEnd : [
+        {name: 'Java', level : 70},
+        {name : 'php', level : 75},
+        {name: 'Python', level : 65},
+        {name : 'Spring boot', level: 70},
+        {name : 'Laravel', level: 60},
+        {name : 'Fast Api', level: 20}
+
+    ],
+    DataBases : [
+        {name : 'Mysql', level: 60},
+        {name : 'SQLServer', level : 65},
+        {name : 'Oracle', level : 60},
+        {name : 'Data WareHouse', level : 15},
+        {name : 'ETL', level : 15},
+        {name : 'Mongo DB', level : 20}
+    ],
+    Otros : [
+        {name : 'postman', level : 70},
+        {name : 'Docker', level : 10},
+        {name : 'Azure', level : 20},
+        {name : 'Terraform', level :20},
+        {name : 'Pandas', level : 50}
+    ]
+
+}
+
+export const experiencia : Experiencia[] = [
+    {
+        titulo : 'Desarrollador web Jr',
+        compania : 'SIT',
+        periodo : '2024 - actualidad',
+        descripcion : [
+            'Desarrollador web jr'
+        ],
+        tecnolgias : [
+            'Laravel', 'PHP', 'MYSQL', 'LiveWire', 'Tailwind', 'JavaScript' 
+        ]
+    },
+        {
+        titulo : 'Soporte Tecnico',
+        compania : 'SIT',
+        periodo : '2024 - actualidad',
+        descripcion : [
+            '•	Revisión y mantenimiento de equipos de cómputo.',
+            '•	Planeamiento y ejecución de instalación de cableado de redes.'
+        ],
+        tecnolgias : []
+    },
+        {
+        titulo : 'Conserje ',
+        compania : 'SIT',
+        periodo : '2022 - 2024',
+        descripcion : [
+            '•	Manipulación de documentación delicada para su proceso de fotocopiado y entrega correspondiente.',
+            '•	Digitalización de documentos y organización de estos en la nube.',
+            '•	Manejo de cuadros de Excel generando reportes según lo solicitado.'
+        ],
+        tecnolgias : []
+    },
+        {
+        titulo : 'Soporte Tecnico',
+        compania : 'Fanasa',
+        periodo : '2021 - 2022',
+        descripcion : [
+            '•	Resolución de problemas técnicos computacionales',
+            '•	Planeamiento y ejecución de instalaciones de cableado eléctrico.',
+            '•	Planeamiento y ejecución de instalación de cableado de redes.'
+        ],
+        tecnolgias : []
     }
 ]

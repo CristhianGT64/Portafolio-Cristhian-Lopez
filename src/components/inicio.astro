@@ -1,16 +1,8 @@
 ---
 
-const nombre = "Cristhian Lopez";
-const rol = "Desarrollador Web";
-const linkContacto = "#contacto";
-const linkProyectos = "#proyectos";
-const linkEmail = "nnn";
-
 import RedSocial from './RedesSociales.astro';
 
 import { redes } from '../content/data/db';
-
-
 
 ---
 <section id="inicio" class="relative isolate overflow-hidden">
@@ -21,19 +13,18 @@ import { redes } from '../content/data/db';
                text-center font-semibold tracking-tight text-neutral-900
                text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05]">
       Hola, soy <br>
-       {nombre}
+       Cristhian Lopez
     </h1>
 
     <!-- Subtítulo -->
     <p class="animate-fade-up opacity-0 [animation-delay:0.2s]
               mt-6 text-center text-2xl sm:text-3xl font-medium text-slate-500">
-      {rol}
-    </p>
+      Profesional en IT y Desarrollador Jr   </p>
 
     <!-- Descripción -->
     <p class="animate-fade-up opacity-0 [animation-delay:0.35s]
               mx-auto mt-8 max-w-3xl text-center text-lg sm:text-xl text-slate-500">
-      Transformo ideas en experiencias digitales excepcionales. Especializado en
+      Transformo ideas en experiencias digitales. Especializado en
       crear aplicaciones web modernas, rápidas y escalables.
     </p>
 
@@ -41,19 +32,19 @@ import { redes } from '../content/data/db';
     <div class="animate-fade-up opacity-0 [animation-delay:0.5s]
                 mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
       <a
-        href={linkContacto}
+        href="#contacto"
         class="inline-flex items-center gap-2 rounded-xl bg-neutral-900 px-5 py-3 text-base font-semibold text-white shadow-sm ring-1 ring-neutral-900/10 hover:bg-neutral-800 active:scale-[0.99] transition"
         aria-label="Ir a contacto">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
              class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8">
           <path stroke-linecap="round" stroke-linejoin="round"
-                d=/>
+                d="M3 7.5l8.57 5.43a2 2 0 0 0 2.16 0L22 7.5M4 18h16a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1z"/>
         </svg>
         Contáctame
       </a>
 
       <a
-        href={linkProyectos}
+        href="#proyectos"
         class="inline-flex items-center justify-center rounded-xl bg-white px-5 py-3 text-base font-semibold text-neutral-800 ring-1 ring-neutral-200 hover:bg-neutral-50 active:scale-[0.99] transition"
         aria-label="Ver proyectos">
         Ver Proyectos
