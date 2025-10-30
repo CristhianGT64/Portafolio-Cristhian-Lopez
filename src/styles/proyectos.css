@@ -1,0 +1,14 @@
+    /* Mostrar el panel correspondiente usando el WRAPPER .projects-card */
+  #tab-cnnJava:checked ~ .projects-card .tab-panel[data-tab="cnnJava"] { display: block; }
+  #tab-dwhBienesRaices:checked ~ .projects-card .tab-panel[data-tab="dwhBienesRaices"] { display: block; }
+  #tab-webappUber:checked ~ .projects-card .tab-panel[data-tab="webappUber"] { display: block; }
+  #tab-webappDelivery:checked ~ .projects-card .tab-panel[data-tab="webappDelivery"] { display: block; }
+  #tab-inventarioPython:checked ~ .projects-card .tab-panel[data-tab="inventarioPython"] { display: block; }
+
+
+  /* Marcar label activo */
+  #tab-cnnJava:checked ~ .projects-card label[for="tab-cnnJava"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+  #tab-dwhBienesRaices:checked ~ .projects-card label[for="tab-dwhBienesRaices"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+  #tab-webappUber:checked ~ .projects-card label[for="tab-webappUber"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+  #tab-webappDelivery:checked ~ .projects-card label[for="tab-webappDelivery"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+  #tab-inventarioPython:checked ~ .projects-card label[for="tab-inventarioPython"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }

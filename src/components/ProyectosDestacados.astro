@@ -1,38 +1,7 @@
 ---
 const titulo = "Proyectos Destacados";
 
-const proyectos = [
-  {
-    id: "dashboard",
-    nombre: "Dashboard Analytics",
-    descripcion:
-      "Panel analítico con métricas en tiempo real, roles y reportes exportables. Arquitectura modular y caché.",
-    tecnologias: ["Next.js", "TypeScript", "Tailwind", "Prisma", "PostgreSQL"],
-    imagen: "/images/projects/dashboard.jpg",
-    codeUrl: "https://github.com/tu-usuario/dashboard",
-    demoUrl: "https://demo.tu-sitio.com/dashboard",
-  },
-  {
-    id: "app-tareas",
-    nombre: "App Móvil de Tareas",
-    descripcion:
-      "Aplicación móvil para gestión de tareas con sincronización en la nube y notificaciones push.",
-    tecnologias: ["React Native", "Firebase", "Redux"],
-    imagen: "/images/projects/tasks-mobile.jpg",
-    codeUrl: "https://github.com/tu-usuario/app-tareas",
-    demoUrl: "https://demo.tu-sitio.com/app-tareas",
-  },
-  {
-    id: "ecommerce",
-    nombre: "E-commerce Platform",
-    descripcion:
-      "Plataforma de comercio electrónico con pasarela de pago, catálogo, carrito y panel de administración.",
-    tecnologias: ["Remix", "Stripe", "Redis", "Cloudflare"],
-    imagen: "/images/projects/ecommerce.jpg",
-    codeUrl: "https://github.com/tu-usuario/ecommerce",
-    demoUrl: "https://demo.tu-sitio.com/ecommerce",
-  },
-];
+  import { proyectos } from "../content/data/db";
 ---
 
 <section id="proyectos" class="relative isolate">
@@ -85,7 +54,12 @@ const proyectos = [
 
               <div class="pt-4">
                 <h3 class="text-xl sm:text-2xl font-semibold text-neutral-900">{p.nombre}</h3>
-                <p class="mt-2 max-w-3xl text-[15px] leading-7 text-neutral-600">{p.descripcion}</p>
+                {
+                  p.descripcion.map((descrip) => (
+                    <p class="mt-2 max-w-3xl text-[15px] leading-7 text-neutral-600">{descrip}</p>
+
+                  ))
+                }
 
                 <div class="mt-4">
                   <h4 class="text-sm font-medium text-neutral-700">Tecnologías</h4>

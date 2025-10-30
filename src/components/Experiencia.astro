@@ -1,34 +1,6 @@
 ---
 
-// Edita tu historial aquí:
-const jobs = [
-  {
-    puesto: "Senior Full Stack Developer",
-    empresa: "Tech Solutions Inc.",
-    periodo: "2023 - Presente",
-    resumen:
-      "Liderando el desarrollo de aplicaciones web escalables con React y Node.js. Implementación de arquitecturas basadas en microservicios y mentoría de desarrolladores junior.",
-  },
-  {
-    puesto: "Full Stack Developer",
-    empresa: "Digital Innovations",
-    periodo: "2021 - 2023",
-    resumen:
-      "Desarrollo de aplicaciones SaaS para múltiples clientes. Trabajo en equipo ágil con enfoque en testing y calidad de código.",
-  },
-  {
-    puesto: "Frontend Developer",
-    empresa: "StartUp Hub",
-    periodo: "2019 - 2021",
-    resumen:
-      "Creación de interfaces de usuario responsivas y accesibles. Colaboración cercana con diseño para implementar diseños pixel-perfect.",
-  },
-];
-
-
-import { experiencia } from "../content/data/db";
-
-
+import { experiencias } from "../content/data/db";
 
 
 ---
@@ -45,7 +17,7 @@ import { experiencia } from "../content/data/db";
 
     <!-- Timeline -->
     <ol class="mt-12 space-y-12">
-      {experiencia.map((job, i) => (
+      {experiencias.map((job, i) => (
         <li
           class="relative grid grid-cols-1 lg:grid-cols-[24px_1fr_auto] gap-x-6 gap-y-2"
         >

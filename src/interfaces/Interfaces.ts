@@ -25,3 +25,12 @@ export interface Experiencia {
     descripcion : string [],
     tecnolgias :  string []
 }
+export interface Proyectos {
+    id : string,
+    nombre : string,
+    tecnologias : string [],
+    descripcion : string [],
+    imagen : string
+    codeUrl : string,
+    demoUrl : string
+}
