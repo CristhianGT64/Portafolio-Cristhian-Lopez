@@ -34,3 +34,10 @@ export interface Proyectos {
     codeUrl : string,
     demoUrl : string
 }
+
+export interface Contacto {
+    name : string,
+    descripcion : string,
+    icono : string
+}
+

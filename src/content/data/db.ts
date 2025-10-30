@@ -1,5 +1,5 @@
 import { string } from "astro:schema";
-import type { RedesSociales, InfoSobreMi, Skills, Experiencia, Proyectos } from "../../interfaces/Interfaces";
+import type { RedesSociales, InfoSobreMi, Skills, Experiencia, Contacto } from "../../interfaces/Interfaces";
 
 export const redes : RedesSociales[] = [
     {
@@ -114,100 +114,15 @@ export const experiencias : Experiencia[] = [
     }
 ]
 
-export const proyectos : Proyectos [] = [
-        {
-        id : 'cnnJava',
-        nombre : 'Red neuronal convolucional (CNN) de reconocimiento de rostros.',
-        tecnologias : [
-            'JAVA'
-        ],
-        descripcion : [
-            'Este sistema utiliza una Red Neuronal Convolucional (CNN) desarrollada en Java para realizar tareas de reconocimiento facial de rostros, utilizando fotografías modelos del rostro a predecir se entrena el modelo, se prueba con imágenes aleatorias donde este y no esté el rostro entrenado, integrando procesamiento de imágenes con métodos matemáticos y aprendizaje profundo en base a convoluciones, agrupamiento, ReLU y backpropagation. '
-        ],
-        imagen : '/images/projects/cnnJava.jpg',
-        codeUrl : 'codigo',
-        demoUrl : 'demo'
-    },
+export const contactos : Contacto[] = [
     {
-        id : 'dwhBienesRaices',
-        nombre : 'Data Warehouse ',
-        tecnologias : [
-            'SQLSERVER',
-            'POSTGRES SQL',
-            'MONGO DB',
-            'ORACLE',
-            'ETL',
-            'VIRTUAL BOX',
-            'ODBC'
-        ],
-        descripcion : [
-            'Data Warehouse (DWH) como plataforma centralizada de análisis empresarial, diseñada para integrar, almacenar y visualizar grandes volúmenes de información provenientes de diversas fuentes del negocio inmobiliario.',
-            'El modelo de negocio aplicado corresponde al sector de bienes raíces, donde se gestionan diferentes tipos de datos distribuidos entre tres sistemas:',
-            'El Sistema de Gestión de Propiedades utiliza Oracle como su base de datos relacional principal para administrar de manera eficiente el registro, la consulta y el seguimiento de propiedades inmobiliarias, propietarios, clientes y agentes. ',
-            'El Sistema de Gestión de Contratos, basado en SQL Server, está diseñado para manejar de manera eficiente todos los elementos necesarios en la administración de contratos. ',
-            'El Sistema de Historial de Operaciones, diseñado en Mongo DB, utiliza una estructura basada en colecciones para gestionar eficientemente registros históricos de diferentes aspectos de una organización.'
-
-        ],
-        imagen : '/images/projects/dwh.png',
-        codeUrl : 'codigo',
-        demoUrl : 'demo'
-    },
-    {
-        id : 'webappUber',
-        nombre : 'Web App de Uber ',
-        tecnologias : [
-            'SQLSERVER',
-            'LARAVEL (PHP)',
-            'SPRING BOOT (JAVA)',
-            'JAVASCRIPT',
-            'APIS REST',
-            'POSTMAN'
-        ],
-        descripcion : [
-            'plataforma que conecta a usuarios que necesitan transporte con conductores disponibles. Diseñada para ofrecer una experiencia rápida, segura y confiable, permite solicitar un viaje con solo unos toques desde el teléfono móvil, garantizando eficiencia tanto para el pasajero como para el conductor. ',
-            'Utilización de dos tecnologías que crean una arquitectura de microservicios escalable, donde cada software recibe sus propios recursos de computación en un sistema distribuido. Manejar FrontEnd, Backend y base de datos en despliegues distintos sin tener que afectar a los demás mitigando riesgos de implementación.',
-            'FrontEnd, desarrollado con Laravel, los controladores consumen dichas APIs REST de forma separada según el servicio que se requiera utilizando la dependencia de Guzzle, con la utilización del enrutamiento se trasladan los datos extraídos hacia la vista, ofreciendo funcionalidad e interacción con el sistema.',
-            'Backend, emplea Spring Boot para la construcción de servicios, con controlador JDBC-TEMPLATE de SQL SERVER para la realización de sentencias preparadas en Java y preparación de DTO para el mapeo de datos segun el procedimiento almacenado ejecutado. Cada servicio mantiene su propia implementación y controlador según la tabla de la base de datos correspondiente, exponiendo sus funcionalidades a través de REST APIs, lo que permite una comunicación flexible.',
-        ],
-        imagen : '/images/projects/uber.png',
-        codeUrl : 'codigo',
-        demoUrl : 'demo'
+        name : 'Email',
+        descripcion : 'crislopezgt84@gmail.com',
+        icono : 'M3 7.5l8.6 5.4a2 2 0 002.2 0L22 7.5M4 18h16a1 1 0 001-1V7a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1z'
     },
         {
-        id : 'webappDelivery',
-        nombre : 'Web App de Delivery ',
-        tecnologias : [
-            'MYSQL',
-            'LARAVEL (PHP)',
-            'SPRING BOOT (JAVA)',
-            'JAVASCRIPT',
-            'APIS REST',
-            'POSTMAN',
-            'API GOOGLE MAPS PLATFORM'
-        ],
-        descripcion : [
-            'web App de gestión de pedidos en línea. Es una solución rápida, intuitiva y segura que conecta a los usuarios con sus productos favoritos, directamente desde su dispositivo. Ya sea que busquen comida, productos del supermercado, medicamentos o cualquier otro artículo, pueden explorar catálogos actualizados, hacer pedidos en tiempo real y recibir entregas directamente en la puerta de su casa.',
-            'Utilización de dos tecnologías que crean una arquitectura de microservicios escalable, donde cada software recibe sus propios recursos de computación en un sistema distribuido. Manejar FrontEnd, Backend y base de datos en despliegues distintos sin tener que afectar a los demás mitigando riesgos de implementación. ',
-            'Backend, emplea Spring Boot para la construcción de servicios, con Spring Data JPA y el controlador MySQL JDBC para la comunicación con la base de datos mediante un enfoque ORM y DTO para el seteo de objetos personalizados. Cada servicio mantiene su propia implementación y controlador según la entidad correspondiente, exponiendo sus funcionalidades a través de REST APIs, lo que permite una comunicación flexible.',
-            'FrontEnd, desarrollado con Laravel, los controladores consumen dichas APIs REST de forma separada según el servicio que se requiera utilizando la dependencia de Guzzle, con la utilización del enrutamiento se trasladan los datos extraídos hacia la vista, ofreciendo funcionalidad e interacción con el sistema. ',
-            'Módulo de mapas y geolocalización para simulacion de movimiento de repartidores dentro de una región delimitada del Distrito Central y asignar automáticamente el repartidor más cercano a cada solicitud.  El frontEnd consume una API de Mapas mediante JavaScript. Utilizando la simulación de Latitudes y Longitudes de cada repartidor y fórmulas matemáticas de Trigonometría esférica se automatizo el cálculo de distancias y asignación de pedidos.'
-        ],
-        imagen : '/images/projects/delivery.png',
-        codeUrl : 'codigo',
-        demoUrl : 'demo'
-    },
-    {
-        id : 'inventarioPython',
-        nombre : 'Control de inventario para mercado pequeño',
-        tecnologias : [
-            'Python',
-        ],
-        descripcion : [
-            'App de consola desarrollado de python de control de inventario y ventas de productos es una solución sencilla, eficiente y accesible, diseñada especialmente para pequeños negocios que necesitan gestionar su stock, realizar ventas y mantener un control claro de sus operaciones diarias sin complicaciones.',
-            
-        ],
-        imagen : '/images/projects/inventarios.png',
-        codeUrl : 'codigo',
-        demoUrl : 'demo'
+        name : 'Ubicación',
+        descripcion : 'Comayagüela, Honduras',
+        icono : 'M19.527 4.799c1.212 2.608.937 5.678-.405 8.173-1.101 2.047-2.744 3.74-4.098 5.614-.619.858-1.244 1.75-1.669 2.727-.141.325-.263.658-.383.992-.121.333-.224.673-.34 1.008-.109.314-.236.684-.627.687h-.007c-.466-.001-.579-.53-.695-.887-.284-.874-.581-1.713-1.019-2.525-.51-.944-1.145-1.817-1.79-2.671L19.527 4.799zM8.545 7.705l-3.959 4.707c.724 1.54 1.821 2.863 2.871 4.18.247.31.494.622.737.936l4.984-5.925-.029.01c-1.741.601-3.691-.291-4.392-1.987a3.377 3.377 0 0 1-.209-.716c-.063-.437-.077-.761-.004-1.198l.001-.007zM5.492 3.149l-.003.004c-1.947 2.466-2.281 5.88-1.117 8.77l4.785-5.689-.058-.05-3.607-3.035zM14.661.436l-3.838 4.563a.295.295 0 0 1 .027-.01c1.6-.551 3.403.15 4.22 1.626.176.319.323.683.377 1.045.068.446.085.773.012 1.22l-.003.016 3.836-4.561A8.382 8.382 0 0 0 14.67.439l-.009-.003zM9.466 5.868L14.162.285l-.047-.012A8.31 8.31 0 0 0 11.986 0a8.439 8.439 0 0 0-6.169 2.766l-.016.018 3.665 3.084z'
     },
 ]
