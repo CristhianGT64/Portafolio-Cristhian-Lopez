@@ -56,7 +56,7 @@ const titulo = "Proyectos Destacados";
                 <h3 class="text-xl sm:text-2xl font-semibold text-neutral-900">{p.nombre}</h3>
                 {
                   p.descripcion.map((descrip) => (
-                    <p class="mt-2 max-w-3xl text-[15px] leading-7 text-neutral-600">{descrip}</p>
+                    <p class="mt-2 max-w-3xl text-[15px] leading-7 text-neutral-600" set:html={descrip}></p>
 
                   ))
                 }

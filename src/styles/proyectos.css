@@ -4,6 +4,8 @@
   #tab-webappUber:checked ~ .projects-card .tab-panel[data-tab="webappUber"] { display: block; }
   #tab-webappDelivery:checked ~ .projects-card .tab-panel[data-tab="webappDelivery"] { display: block; }
   #tab-inventarioPython:checked ~ .projects-card .tab-panel[data-tab="inventarioPython"] { display: block; }
+  #tab-terraform:checked ~ .projects-card .tab-panel[data-tab="terraform"] { display: block; }
+
 
 
   /* Marcar label activo */
@@ -12,3 +14,5 @@
   #tab-webappUber:checked ~ .projects-card label[for="tab-webappUber"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
   #tab-webappDelivery:checked ~ .projects-card label[for="tab-webappDelivery"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
   #tab-inventarioPython:checked ~ .projects-card label[for="tab-inventarioPython"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+  #tab-terraform:checked ~ .projects-card label[for="tab-terraform"] { background: #0a0a0a; color:#fff; border:1px solid rgb(229 231 235); }
+

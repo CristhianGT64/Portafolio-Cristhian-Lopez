@@ -97,4 +97,35 @@ export const proyectos : Proyectos [] = [
         codeUrl : 'codigo',
         demoUrl : 'demo'
     },
+    {
+        id : 'terraform',
+        nombre : 'Arquitectura para plataforma de alquiler y flota de vehículos',
+        tecnologias : [
+            'azure',
+            'GitHub',
+            'Terraform'
+        ],
+        descripcion : [
+            '<h1> Resumen del Proyecto </h1>',
+            '<p>Este proyecto implementa una infraestructura completa en Azure para una empresa de seguridad y logística que lanza una aplicación de renta de vehículos blindados. La solución separa las cargas de trabajo transaccionales (OLTP) de las analíticas (OLAP) para garantizar alto rendimiento operacional mientras se permite análisis profundo de datos históricos.</p>',
+            '<p>Toda la infraestructura fue desplegada utilizando Terraform, siguiendo las mejores prácticas de Infrastructure as Code (IaC) para garantizar reproducibilidad, versionado y automatización.</p>',
+            '<h1>Arquitectura de la Solución</h1>',
+            '<img src="/images/projects/arquitecturaTerraform.png" alt="Arquitectura para azure" class="rounded-lg w-full mt-4" />',
+            '<h1>Componentes Principales</h1>',
+            `<h4>🗄️ Azure SQL Database</h4>
+            Base de datos transaccional para operaciones en tiempo real: reservas, contratos y estado de flota`,
+            `<h4> 📦 Data Lake Gen2</h4>
+            Almacenamiento centralizado para datos históricos y logs de telemetría en formato JSON`,
+            `<h4>🔄 Azure Data Factory </h4>
+            Pipeline ETL batch programado que extrae datos OLTP y los carga en Data Lake`,
+            `<h4>🔬 Azure Databricks</h4>
+            Plataforma de análisis con notebooks y Apache Spark para procesar telemetría compleja`,
+            `<h4>🔐 Azure Key Vault</h4>
+            Gestión centralizada de secretos: connection strings, access keys y credenciales`,
+            
+        ],
+        imagen : '/images/projects/imageTerraformAzure.png',
+        codeUrl : 'https://github.com/MiltonAlvarado/arquitectura_terraform_flota_vehiculos.git',
+        demoUrl : 'null'
+    },
 ]
