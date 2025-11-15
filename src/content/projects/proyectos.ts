@@ -13,7 +13,7 @@ export const proyectos : Proyectos [] = [
         ],
         imagen : '/images/projects/cnnJava.jpg',
         codeUrl : 'https://github.com/CristhianGT64/CNN-reconocimiento-Facial-java-sin-librerias',
-        demoUrl : 'demo'
+        demoUrl : '#'
     },
     {
         id : 'dwhBienesRaices',
@@ -37,7 +37,7 @@ export const proyectos : Proyectos [] = [
         ],
         imagen : '/images/projects/dwh.png',
         codeUrl : 'codigo',
-        demoUrl : 'demo'
+        demoUrl : '#'
     },
     {
         id : 'webappUber',
@@ -58,7 +58,7 @@ export const proyectos : Proyectos [] = [
         ],
         imagen : '/images/projects/uber.png',
         codeUrl : 'https://github.com/CristhianGT64/UberFrontEnd',
-        demoUrl : 'demo'
+        demoUrl : '#'
     },
         {
         id : 'webappDelivery',
@@ -81,7 +81,7 @@ export const proyectos : Proyectos [] = [
         ],
         imagen : '/images/projects/delivery.png',
         codeUrl : 'https://github.com/CristhianGT64/Proyecto-Front-End-',
-        demoUrl : 'demo'
+        demoUrl : '#'
     },
     {
         id : 'inventarioPython',
@@ -125,7 +125,7 @@ export const proyectos : Proyectos [] = [
             
         ],
         imagen : '/images/projects/imageTerraformAzure.png',
-        codeUrl : 'https://github.com/MiltonAlvarado/arquitectura_terraform_flota_vehiculos.git',
-        demoUrl : 'null'
+        codeUrl : 'https://github.com/CristhianGT64/ArquitecturaAzureTerraform',
+        demoUrl : '#'
     },
 ]
