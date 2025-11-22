@@ -58,12 +58,11 @@ export const skills : Skills = {
         {name : 'ETL', level : 15},
         {name : 'Mongo DB', level : 20}
     ],
-    Otros : [
+    Infraestructura : [
         {name : 'postman', level : 70},
-        {name : 'Docker', level : 10},
-        {name : 'Azure', level : 20},
+        {name : 'Docker', level : 15},
+        {name : 'Azure', level : 23},
         {name : 'Terraform', level :20},
-        {name : 'Pandas', level : 50}
     ]
 
 }

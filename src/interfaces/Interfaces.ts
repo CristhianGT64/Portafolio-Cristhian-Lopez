@@ -31,8 +31,13 @@ export interface Proyectos {
     tecnologias : string [],
     descripcion : string [],
     imagen : string
-    codeUrl : string,
-    demoUrl : string
+    codeUrl : projectDescription [],
+    demoUrl : projectDescription []
+}
+
+export interface projectDescription {
+    nombre : string,
+    url : string,
 }
 
 export interface Contacto {

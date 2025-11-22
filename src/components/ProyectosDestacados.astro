@@ -71,20 +71,30 @@ const titulo = "Proyectos Destacados";
                 </div>
 
                 <div class="mt-5 flex items-center gap-3">
-                  <a href={p.codeUrl} target="_blank" rel="noopener"
-                     class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-3.5 py-2 text-sm font-semibold text-white ring-1 ring-neutral-900/10 hover:bg-neutral-800">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M8 16l-4-4 4-4m8 8l4-4-4-4M14 4l-4 16"/>
-                    </svg>
-                    Código
-                  </a>
-                  <a href={p.demoUrl} target="_blank" rel="noopener"
-                     class="inline-flex items-center gap-2 rounded-lg bg-white px-3.5 py-2 text-sm font-semibold text-neutral-800 ring-1 ring-neutral-200 hover:bg-neutral-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M8 5v14l11-7-11-7z"/>
-                    </svg>
-                    Demo
-                  </a>
+                  {/* Codigo para recorrer codigos de git */}
+                  {p.codeUrl.map((codeGit) => (
+
+                    <a href={codeGit.url} target="_blank" rel="noopener"
+                      class="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-3.5 py-2 text-sm font-semibold text-white ring-1 ring-neutral-900/10 hover:bg-neutral-800">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 16l-4-4 4-4m8 8l4-4-4-4M14 4l-4 16"/>
+                      </svg>
+                      {codeGit.nombre}
+                    </a>
+
+                  ))}
+
+                  {/* recorrer los desploy */}
+                  {p.demoUrl.map((desploy) => (
+                      <a href={desploy.url} target="_blank" rel="noopener"
+                      class="inline-flex items-center gap-2 rounded-lg bg-white px-3.5 py-2 text-sm font-semibold text-neutral-800 ring-1 ring-neutral-200 hover:bg-neutral-50">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7-11-7z"/>
+                      </svg>
+                      {desploy.nombre}
+                    </a>
+                  ))}
+
                 </div>
               </div>
             </article>
