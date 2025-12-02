@@ -68,17 +68,17 @@ export const skills : Skills = {
 }
 
 export const experiencias : Experiencia[] = [
-    {
-        titulo : 'Desarrollador web Jr',
-        compania : 'SIT',
-        periodo : '2024 - actualidad',
-        descripcion : [
-            'Desarrollador web jr'
-        ],
-        tecnolgias : [
-            'Laravel', 'PHP', 'MYSQL', 'LiveWire', 'Tailwind', 'JavaScript' 
-        ]
-    },
+    // {
+    //     titulo : 'Desarrollador web Jr',
+    //     compania : 'SIT',
+    //     periodo : '2024 - actualidad',
+    //     descripcion : [
+    //         'Desarrollador web jr'
+    //     ],
+    //     tecnolgias : [
+    //         'Laravel', 'PHP', 'MYSQL', 'LiveWire', 'Tailwind', 'JavaScript' 
+    //     ]
+    // },
         {
         titulo : 'Soporte Tecnico',
         compania : 'SIT',
